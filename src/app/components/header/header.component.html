@@ -1,0 +1,37 @@
+<nav *ngIf="searchstat == false">
+  <div class="hed-inp">
+    <input class="input" type="text" placeholder="Search Anything" />
+  </div>
+  <div class="right">
+    <div class="search-icon" (click)="this.searchstat = true">
+      <fa-icon class="more-icon" [icon]="faMagnifyingGlass"></fa-icon>
+    </div>
+    <div>
+      <fa-icon class="more-icon" [icon]="faBell"></fa-icon>
+    </div>
+    <div class="user">
+      <img [src]="userService.user.avatar" alt="" />
+      <div class="name">{{ userService.user.name }}</div>
+      <fa-icon class="more-icon" [icon]="faEllipsis"></fa-icon>
+    </div>
+    <div
+      class="wrapper-menu"
+      (click)="menuToggler()"
+      [ngClass]="{ open: userService.toggle.value }"
+    >
+      <div class="line-menu half start"></div>
+      <div class="line-menu"></div>
+      <div class="line-menu half end"></div>
+    </div>
+  </div>
+</nav>
+<nav *ngIf="searchstat">
+  <input
+    type="text"
+    placeholder="search..."
+    name="search"
+    id="search"
+    class="search"
+  />
+  <button class="close-button" (click)="this.searchstat = false">x</button>
+</nav>

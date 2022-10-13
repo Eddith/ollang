@@ -1,0 +1,211 @@
+nav {
+  z-index: 555;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bell-icon {
+  display: flex;
+  color: grey;
+  font-size: 25px;
+  margin-right: 20px;
+}
+.more-icon {
+  display: flex;
+
+  color: grey;
+  font-size: 25px;
+}
+.input {
+  display: flex;
+
+  height: 42px;
+  border: 0px solid;
+  border-radius: 15px;
+  width: 100%;
+  padding: 9px 4px 9px 40px;
+  background: white
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat 13px center;
+}
+.hed-inp {
+  display: flex;
+
+  width: 38vw;
+}
+.wrapper-menu {
+  display: none !important;
+  color: grey;
+  margin-left: 25px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 330ms ease-out;
+}
+
+.wrapper-menu.open {
+  margin-left: 25px;
+  transform: rotate(-45deg);
+}
+
+.line-menu {
+  background-color: grey;
+  border-radius: 5px;
+  width: 100%;
+  height: 3px;
+}
+
+.line-menu.half {
+  width: 50%;
+}
+
+.line-menu.start {
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: right;
+}
+
+.open .line-menu.start {
+  transform: rotate(-90deg) translateX(3px);
+}
+
+.line-menu.end {
+  align-self: flex-end;
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: left;
+}
+
+.open .line-menu.end {
+  transform: rotate(-90deg) translateX(-3px);
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper-menu {
+    display: flex !important;
+    color: grey;
+    margin-left: 25px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 330ms ease-out;
+  }
+
+  .wrapper-menu.open {
+    margin-left: 25px;
+    transform: rotate(-45deg);
+  }
+
+  .line-menu {
+    background-color: grey;
+    border-radius: 5px;
+    width: 100%;
+    height: 3px;
+  }
+
+  .line-menu.half {
+    width: 50%;
+  }
+
+  .line-menu.start {
+    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    transform-origin: right;
+  }
+
+  .open .line-menu.start {
+    transform: rotate(-90deg) translateX(3px);
+  }
+
+  .line-menu.end {
+    align-self: flex-end;
+    transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+    transform-origin: left;
+  }
+
+  .open .line-menu.end {
+    transform: rotate(-90deg) translateX(-3px);
+  }
+}
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  .name {
+    margin-right: 20px;
+    color: black;
+    font-weight: 600;
+  }
+  img {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    margin: 0px 20px;
+  }
+}
+.right {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 600px) {
+  .right {
+    width: 100%;
+  }
+  .hed-inp {
+    display: none;
+    width: auto;
+  }
+}
+
+///////////////
+.close-button {
+  font-size: 29px;
+  margin: 0px 15px;
+  font-weight: bolder;
+  border: none;
+  background-color: transparent;
+  &:hover {
+    color: #86b5f3;
+  }
+}
+.search {
+  -webkit-appearance: none;
+  padding-left: 45px;
+  margin: 0px 15px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 100;
+  width: 100%;
+  height: 35px;
+  border: none;
+  transition: all 0.5s ease;
+  &::placeholder {
+    font-size: 25px;
+    font-weight: 100;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .search-icon {
+    display: none;
+  }
+}

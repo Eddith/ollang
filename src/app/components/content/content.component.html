@@ -1,0 +1,213 @@
+<div class="content-row">
+  <div class="prf">
+    <div class="profile-wrapper">
+      <div class="profile-img">
+        <img [src]="userService.user.avatar" alt="" />
+      </div>
+      <div class="profile-details">
+        <div class="profile-title-button">
+          <div class="title-buttons">
+            <div>
+              <h1>{{ userService.user.name }}</h1>
+            </div>
+            <div>
+              <button class="edit-button">Edit Profile</button
+              ><button class="public-button">Public View</button>
+            </div>
+          </div>
+          <div class="location">
+            <fa-icon class="menu-icon" [icon]="faLocationDot"></fa-icon>
+            {{ userService.user.state }}, {{ userService.user.country }}
+          </div>
+        </div>
+        <div class="profile-describe">
+          <div style="max-width: 70%; font-size: 20px">
+            {{ userService.user.summary }}
+            <a href="" class="more"> MORE</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-stats">
+      <div class="per-item">
+        <div class="stats-icon"><fa-icon [icon]="faClock"></fa-icon></div>
+        <div class="stats-det">
+          <div class="top-ctn">
+            {{
+              userService.user.yearsOfExperience > 3
+                ? "3+"
+                : userService.user.yearsOfExperience
+            }}
+            Years
+          </div>
+          <div class="bottom-ctn">Experienced</div>
+        </div>
+      </div>
+      <div class="per-item">
+        <div class="stats-icon"><fa-icon [icon]="faTrophy"></fa-icon></div>
+        <div class="stats-det">
+          <div class="top-ctn">
+            {{ userService.user.certificateCount }} Certificates
+          </div>
+          <div class="bottom-ctn">Achieved</div>
+        </div>
+      </div>
+      <div class="per-item">
+        <div class="stats-icon"><fa-icon [icon]="faFileZipper"></fa-icon></div>
+        <div class="stats-det">
+          <div class="top-ctn">
+            {{ userService.user.numberOfInternships }} Intership
+          </div>
+          <div class="bottom-ctn">Completed</div>
+        </div>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="tab-bar">
+        <div>
+          <div class="tab-bar-name-active">Experience</div>
+        </div>
+        <div>
+          <div class="tab-bar-name">Biography</div>
+        </div>
+        <div>
+          <div class="tab-bar-name">Skills</div>
+        </div>
+        <div>
+          <div class="tab-bar-name">Portfolio</div>
+        </div>
+      </div>
+      <div class="experience-content"></div>
+    </div>
+    <div class="bottom-line"></div>
+    <div class="boxes">
+      <div class="header">
+        <div class="title-section">
+          <div>Job Experience</div>
+          <div>3 Job History</div>
+        </div>
+        <div>
+          <button class="button">Add More</button>
+        </div>
+      </div>
+      <div class="title">
+        <div class="img">
+          <img
+            width="55px"
+            src="https://cdn-icons-png.flaticon.com/512/184/184093.png"
+            alt=""
+          />
+        </div>
+        <div class="text">
+          <div class="position">
+            <div>Graphic Designer</div>
+            <div>Dribble Inc</div>
+          </div>
+          <div class="date">
+            <fa-icon [icon]="faClock"></fa-icon>
+            <div>Feb 2016 - Dec 2017</div>
+          </div>
+          <div>
+            <div class="location-2">
+              <fa-icon class="menu-icon" [icon]="faLocationDot"></fa-icon>
+              New York, USA
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box-content">
+        <div class="desc">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi,
+          voluptate recusandae dolorum culpa expedita magnam fugiat, ex quam
+          corrupti veniam iusto exercitationem debitis quidem! Modi tenetur
+          earum tempora eum facilis?
+        </div>
+        <div class="images-box">
+          <div class="mf">Media Files (2)</div>
+          <div class="images">
+            <img
+              src="https://thumbs.dreamstime.com/b/professional-male-photographer-digital-photo-camera-photo-studio-isolated-grey-photographer-102998392.jpg"
+              alt=""
+            /><img
+              src="https://media.istockphoto.com/photos/in-the-photo-studio-with-professional-equipment-portrait-of-the-picture-id1196172395?k=20&m=1196172395&s=612x612&w=0&h=6kybVfbh-bULCkoLbTIJhfohoUdsjC88vZMLWX28cOQ="
+              alt=""
+            />
+          </div>
+          <div class="bottom-line"></div>
+        </div>
+      </div>
+      <div class="title">
+        <div class="img">
+          <img
+            width="55px"
+            src="https://cdn-icons-png.flaticon.com/512/393/393742.png"
+            alt=""
+          />
+        </div>
+        <div class="text">
+          <div class="position">
+            <div>Lead Designer</div>
+            <div>Sketch App</div>
+          </div>
+          <div class="date">
+            <fa-icon [icon]="faClock"></fa-icon>
+            <div>Apr 2010 - Sep 2011</div>
+          </div>
+          <div>
+            <div class="location-2">
+              <fa-icon class="menu-icon" [icon]="faLocationDot"></fa-icon>
+              Katmandu, Nepal
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box-content">
+        <div class="desc">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi,
+          voluptate recusandae dolorum culpa expedita magnam fugiat, ex quam
+          corrupti veniam iusto exercitationem debitis quidem! Modi tenetur
+          earum tempora eum facilis?
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pro-content">
+    <img
+      class="pro-img"
+      src="https://benchmark.com.tr/wp-content/uploads/2021/12/trophy.png"
+      alt=""
+    />
+    <h2>
+      Upgrade to <span style="font-weight: bolder; color: black">Pro</span>
+    </h2>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere autem
+    </p>
+    <div class="list">
+      <ul>
+        <li>
+          <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
+          Unlimited Job Post.
+        </li>
+        <li>
+          <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
+          Multiple Job Communication.
+        </li>
+        <li>
+          <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
+          Unlimited Calling Access From Different City.
+        </li>
+        <li>
+          <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
+          Hire 10+ Freelancers for one project.
+        </li>
+        <li>
+          <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
+          Filter,Block,Search Talent Freelancers.
+        </li>
+      </ul>
+    </div>
+    <div><button class="edit-button">Upgrade Plan</button></div>
+  </div>
+</div>
