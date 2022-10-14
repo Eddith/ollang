@@ -1,29 +1,45 @@
-<div class="content-row">
+<div
+  class="content-row flex flex-row flex-wrap bg-slate-200 text-gray-600 justify-center text-center pt-14"
+>
   <div class="prf">
-    <div class="profile-wrapper">
-      <div class="profile-img">
-        <img [src]="userService.user.avatar" alt="" />
+    <div
+      class="profile-wrapper w-full flex flex-nowrap flex-row justify-center bg-slate-200"
+    >
+      <div class="profile-img flex flex-1 justify-start mr-3">
+        <img
+          class="m-0 p-0 w-full h-full object-cover"
+          [src]="userService.user.avatar"
+          alt=""
+        />
       </div>
-      <div class="profile-details">
-        <div class="profile-title-button">
-          <div class="title-buttons">
+      <div class="profile-details flex flex-col justify-start">
+        <div class="profile-title-button flex flex-col justify-start">
+          <div
+            class="title-buttons text-black flex flex-row justify-between items-start"
+          >
             <div>
               <h1>{{ userService.user.name }}</h1>
             </div>
             <div>
               <button class="edit-button">Edit Profile</button
-              ><button class="public-button">Public View</button>
+              ><button
+                class="public-button bg-transparent text-base text-gray-400 font-bold"
+              >
+                Public View
+              </button>
             </div>
           </div>
-          <div class="location">
+          <div class="location text-xl font-bold text-gray-500">
             <fa-icon class="menu-icon" [icon]="faLocationDot"></fa-icon>
             {{ userService.user.state }}, {{ userService.user.country }}
           </div>
         </div>
-        <div class="profile-describe">
+        <div
+          class="profile-describe w-full font-semibold text-gray-500 text-left flex items-end"
+        >
           <div style="max-width: 70%; font-size: 20px">
             {{ userService.user.summary }}
-            <a href="" class="more"> MORE</a>
+            <a href="" class="more font-black text-violet-700"> MORE</a>
           </div>
         </div>
       </div>
@@ -174,20 +190,23 @@
 
   <div class="pro-content">
     <img
-      class="pro-img"
+      class="pro-img h-auto ml-36"
       src="https://benchmark.com.tr/wp-content/uploads/2021/12/trophy.png"
       alt=""
     />
-    <h2>
+    <h2 class="mt-5">
       Upgrade to <span style="font-weight: bolder; color: black">Pro</span>
     </h2>
-    <p>
+    <p class="mt-4 text-center text-gray-400 text-lg">
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere autem
     </p>
-    <div class="list">
+    <div class="list mt-10 mb-10 justify-start flex">
       <ul>
         <li>
-          <fa-icon class="check-icon" [icon]="faCircleCheck"></fa-icon>
+          <fa-icon
+            class="check-icon mr-3 text-xl text-green-700"
+            [icon]="faCircleCheck"
+          ></fa-icon>
           Unlimited Job Post.
         </li>
         <li>
