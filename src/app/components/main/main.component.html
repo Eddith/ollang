@@ -1,5 +1,8 @@
-<main class="app-wrapper">
-  <nav class="side-bar" [ngClass]="{ active: userSer.toggle.value }">
+<main class="relative w-full h-screen m-auto overflow-hidden bg-slate-100">
+  <nav
+    class="absolute w-72 h-full py-7 px-0 text-center bg-white overflow-y-auto table z-50"
+    [ngClass]="{ active: userSer.toggle.value }"
+  >
     <app-sidebar></app-sidebar>
   </nav>
   <section class="content">
